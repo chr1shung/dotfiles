@@ -49,6 +49,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-surround'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Go plugins
 Plugin 'fatih/vim-go'
