@@ -68,6 +68,7 @@ Plugin 'garbas/vim-snipmate'
 call vundle#end()           " required
 filetype plugin indent on   " required
 
+runtime macros/matchit.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -199,6 +200,10 @@ set wrap "Wrap lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" More natural split opening
+set splitbelow
+set splitright
+
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
