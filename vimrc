@@ -2,42 +2,40 @@ set nocompatible " VI compatible mode is disabled so that Vim things work
 
 " Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable 
+syntax on 
 
 " Space & Tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set shiftwidth=4
-set tabstop=4       
-set softtabstop=4  
-set expandtab     
+set tabstop=4         " number of visual space per TAB      
+set shiftwidth=4      " insert 4 spaces on a tab
+set softtabstop=4     " number of spaces in tab when editing 
+set expandtab         " tabs are spaces
 
 " UI Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set number
-set relativenumber
-set ruler
-set showcmd
-set cursorline
-filetype indent on
-set wildmenu
-set showmatch
-set laststatus=2
-set mouse+=a
-set noerrorbells visualbell t_vb=
+set number            " show line numbers 
+" set relativenumber  " show relative numbering
+set ruler             " display cursor position
+set showcmd           " show command in bottom bar
+set cursorline        " highlight current line
+filetype indent on    " load filetype-specific indent files
+filetype plugin on    " load filetype-specific plugin files
+set wildmenu          " visual autocomplete for command menu
+set showmatch         " highlight matching [{()}]
+set laststatus=2      " show the status line at the bottom
+set mouse+=a          " a necessary evil, mouse support
+set noerrorbells visualbell t_vb=   "disable annoying error noises
+set linebreak         " have lines warp instead of continue off-screen
+set scrolloff=12      " keep cursor in approximately the middle of the screen
 
 " Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set hidden
+set hidden            " allows having hidden buffers (not displayed in any window)
 
-" Insertion behaviour
+" Sensible stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The backspace key has slightly unintuitive behavior by default. For example,
-" by default, you can't backspace before the insertion point set with 'i'.
-" This configuration makes backspace behave more reasonably, in that you can
-" backspace over anything.
-set backspace=indent,eol,start
+set backspace=indent,eol,start  " make backspace behave in a more intuitive way
 
-" Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
 " Leader Shortcuts
@@ -49,29 +47,25 @@ nmap <leader>w :w!<cr>
 
 " Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
-nnoremap <leader>/ :nohlsearch<CR>  " turn off search highlight
+set incsearch   " search as characters are entered
+set hlsearch    " highlight matches
+set ignorecase  " ignore case in searches by default
+set smartcase   " but make it case sensitive if an uppercase is entered
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
 
 " Others
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable the default Vim startup message.
 set shortmess+=I
 
-
-" Try to prevent bad habits like using the arrow keys for movement. This is
-" not the only possible bad habit. For example, holding down the h/j/k/l keys
-" for movement, rather than using more efficient movement commands, is also a
-" bad habit. The former is enforceable through a .vimrc, while we don't know
-" how to prevent the latter.
-" Do this in normal mode...
+" Try to prevent bad habits like using the arrow keys for movement...
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
+
 inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
