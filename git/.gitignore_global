@@ -1,0 +1,15 @@
+# Logs
+*.log
+
+# Temporary files
+*#
+*.bak
+*.swo
+*.swp
+*~
+
+# Tools specific
+.idea/
+
+# OSX generated files
+.DS_Store

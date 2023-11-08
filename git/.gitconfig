@@ -5,6 +5,8 @@
     ui = auto
 [init]
     defaultBranch = main
+[core]
+    excludesfile = ~/.gitignore_global
 [alias]
     graph = log --graph --full-history --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)[%an]%C(reset)'
 [pager]
