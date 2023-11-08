@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 
 import:
- - ~/Workspace/alacritty-theme/themes/everforest_dark.yaml
+ - ~/Workspace/alacritty-theme/themes/tomorrow_night.yaml
 
 window:
   padding:

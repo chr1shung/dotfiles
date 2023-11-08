@@ -1,0 +1,16 @@
+name: Test MacOS Setup Script
+run-name: ${{ github.actor }} is testing his setup script 🚀
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: koalaman/shellcheck-alpine:v0.8.0
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Shell check
+        run: |
+          shellcheck -S warning -a -x shell_setup.sh
+          shellcheck -S warning -a -x setup_all.sh
