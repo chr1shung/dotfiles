@@ -56,12 +56,3 @@ alias gg='git graph'
 # scm_breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-# FZF
-[ -f ~/.fzf.zsh ] && source $HOME/.fzf.zsh
-
-export FZF_DEFAULT_COMMAND='fd . --hidden --exclude ".git"'
-export FZF_DEFAULT_OPTS='-i --reverse --height=90%'
-
-# zoxide fzf opts
-export _ZO_FZF_OPTS=$FZF_DEFAULT_OPTS
-

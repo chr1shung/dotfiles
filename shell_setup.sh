@@ -29,7 +29,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/inst
 packages=(
     diff-so-fancy
     fd
-    fzf
     go
     go-task
     jq
@@ -45,9 +44,6 @@ for pkg in "${packages[@]}";
 do
     brew install "$pkg"
 done
-
-# To install useful key bindings and fuzzy completion:
-"$(brew --prefix)"/opt/fzf/install
 
 apps=(
     alacritty
