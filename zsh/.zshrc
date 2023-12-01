@@ -36,6 +36,7 @@ setopt appendhistory           # Immediately append history instead of overwriti
 setopt nobeep
 
 plugins=(
+  git
   kubectl
   fast-syntax-highlighting
   zsh-autosuggestions
@@ -52,7 +53,12 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 alias t='task -g'
 alias gg='git graph'
+alias cat='bat --style=plain --theme=1337'
 
-# scm_breeze
-[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+alias ld='eza -lD --icons'
+alias lf='eza -lF --icons --color=always | grep -v /'
+alias lh='eza -dl .* --icons --group-directories-first'
+alias ll='eza -al --icons --group-directories-first'
+alias ls='eza -alF --icons --color=always --sort=size | grep -v /'
+alias lt='eza -al --icons --sort=modified'
 

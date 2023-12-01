@@ -27,16 +27,22 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 packages=(
-    diff-so-fancy
+    bat
+    bottom
+    eza
     fd
+    git-delta
     go
     go-task
+    gping
     jq
     pure
     reattach-to-user-namespace
     ripgrep
+    sd
     stow
     tmux
+    xh
     zoxide
     zsh
 )
@@ -52,8 +58,8 @@ apps=(
     docker
     goland
     keepingyouawake
-    notion
     postman
+    raycast
     slack
     spectacle
     spotify
@@ -67,12 +73,4 @@ done
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 brew install font-source-code-pro
-
-#######################
-# Misc.
-#######################
-
-# scm-breeze
-git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
-~/.scm_breeze/install.sh
 
