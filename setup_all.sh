@@ -7,7 +7,6 @@ set -x          # Enable verbosity
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(git tmux vim zsh)
 OLD_DOTFILES="dotfile_bk_$(date -u +"%Y%m%d%H%M%S")"
 mkdir $OLD_DOTFILES
 
@@ -29,6 +28,13 @@ backup_if_exists ~/.gitconfig
 backup_if_exists ~/.tmux.conf
 backup_if_exists ~/.alacritty.yml
 
+PROGRAMS=(
+    alacritty
+    git
+    tmux
+    vim
+    zsh
+)
 for program in "${PROGRAMS[@]}"; do
     echo "Configuring $program"
     stow -v --target=$HOME $program

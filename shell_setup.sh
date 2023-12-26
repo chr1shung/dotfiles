@@ -18,6 +18,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git \
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
+# Alacritty theme
+mkdir -p ~/Workspace
+git clone https://github.com/alacritty/alacritty-theme ~/Workspace
 
 #######################
 # HomeBrew
@@ -29,6 +32,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/inst
 packages=(
     bat
     bottom
+    colima
+    docker
     eza
     fd
     git-delta
@@ -36,6 +41,8 @@ packages=(
     go-task
     gping
     jq
+    mcfly
+    pgcli
     pure
     reattach-to-user-namespace
     ripgrep
@@ -55,13 +62,13 @@ apps=(
     alacritty
     brave-browser
     discord
-    docker
     goland
+    itsycal
     keepingyouawake
     postman
     raycast
+    rectangle
     slack
-    spectacle
     spotify
 )
 
