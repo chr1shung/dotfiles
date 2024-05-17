@@ -26,7 +26,7 @@ backup_if_exists ~/.zshrc
 backup_if_exists ~/.vimrc
 backup_if_exists ~/.gitconfig
 backup_if_exists ~/.tmux.conf
-backup_if_exists ~/.alacritty.yml
+backup_if_exists ~/.alacritty.toml
 
 PROGRAMS=(
     alacritty

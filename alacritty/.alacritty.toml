@@ -1,0 +1,157 @@
+import = ["$HOME/Workspace/alacritty-theme/themes/everforest_dark.yaml"]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+unfocused_hollow = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 20
+
+[font.bold]
+family = "Berkeley Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Berkeley Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Berkeley Mono"
+style = "Italic"
+
+[font.normal]
+family = "Berkeley Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "Return"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001x"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00011"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00012"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00013"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00014"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00015"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00016"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00017"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00018"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00019"
+key = "Key9"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001H"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001J"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001K"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001L"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001-"
+key = "Minus"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001|"
+key = "Backslash"
+mods = "Command"
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+decorations = "Buttonless"
+
+[window.padding]
+x = 6
+y = 6

@@ -20,14 +20,15 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
 
 # Alacritty theme
 mkdir -p ~/Workspace
-git clone https://github.com/alacritty/alacritty-theme ~/Workspace
+git clone https://github.com/alacritty/alacritty-theme ~/Workspace/alacritty-theme
 
 #######################
 # HomeBrew
 #######################
 
 # Homebrew
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 packages=(
     bat
@@ -51,7 +52,6 @@ packages=(
     tmux
     xh
     zoxide
-    zsh
 )
 for pkg in "${packages[@]}";
 do
@@ -60,12 +60,15 @@ done
 
 apps=(
     alacritty
+    alt-tab
+    bruno
     brave-browser
     discord
     goland
+    hyperkey
     itsycal
     keepingyouawake
-    postman
+    postico
     raycast
     rectangle
     slack
@@ -78,6 +81,5 @@ do
 done
 
 brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
-brew install font-source-code-pro
+brew install font-jetbrains-mono
 
