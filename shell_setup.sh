@@ -8,7 +8,7 @@ set -x # Enable verbosity
 #######################
 
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions.git \
