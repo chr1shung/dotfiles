@@ -18,10 +18,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git \
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
-# Alacritty theme
-mkdir -p ~/Workspace
-git clone https://github.com/alacritty/alacritty-theme ~/Workspace/alacritty-theme
-
 #######################
 # HomeBrew
 #######################
@@ -30,9 +26,12 @@ git clone https://github.com/alacritty/alacritty-theme ~/Workspace/alacritty-the
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+brew tap julien-cpsn/atac
+
 packages=(
+    atac
     bat
-    bottom
+    #bottom
     colima
     docker
     eza
@@ -40,14 +39,15 @@ packages=(
     git-delta
     go
     go-task
-    gping
+    #gping
     jq
+    lazydocker
     mcfly
     pgcli
     pure
     reattach-to-user-namespace
     ripgrep
-    sd
+    #sd
     stow
     tmux
     xh
@@ -60,17 +60,15 @@ done
 
 apps=(
     alacritty
-    alt-tab
-    bruno
+    arc
     brave-browser
     discord
     goland
     hyperkey
     itsycal
-    keepingyouawake
+    netnewswire
     postico
     raycast
-    rectangle
     slack
     spotify
 )
@@ -82,4 +80,12 @@ done
 
 brew tap homebrew/cask-fonts
 brew install font-jetbrains-mono
+
+#######################
+# Misc
+#######################
+
+# Alacritty theme
+mkdir -p ~/Workspace
+git clone https://github.com/alacritty/alacritty-theme ~/Workspace/alacritty-theme
 

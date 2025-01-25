@@ -1,4 +1,14 @@
-import = ["$HOME/Workspace/alacritty-theme/themes/everforest_dark.yaml"]
+import = ["/Users/chris/Workspace/alacritty-theme/themes/oceanic_next.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "Buttonless"
+
+[window.padding]
+x = 6
+y = 6
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -6,31 +16,31 @@ draw_bold_text_with_bright_colors = true
 [cursor]
 unfocused_hollow = true
 
-[env]
-TERM = "xterm-256color"
-
 [font]
-size = 20
-
-[font.bold]
-family = "Berkeley Mono"
-style = "Bold"
-
-[font.bold_italic]
-family = "Berkeley Mono"
-style = "Bold Italic"
-
-[font.italic]
-family = "Berkeley Mono"
-style = "Italic"
+size = 18
 
 [font.normal]
 family = "Berkeley Mono"
 style = "Regular"
 
+[font.bold]
+family = "Berkeley Mono"
+style = "Bold"
+
+[font.italic]
+family = "Berkeley Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "Berkeley Mono"
+style = "Bold Italic"
+
 [font.offset]
 x = 0
 y = 1
+
+[mouse]
+hide_when_typing = false
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -56,6 +66,16 @@ mods = "Command"
 action = "ToggleFullscreen"
 key = "Return"
 mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Up"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Down"
+mods = "Shift"
 
 [[keyboard.bindings]]
 chars = "\u0001c"
@@ -142,16 +162,7 @@ chars = "\u0001|"
 key = "Backslash"
 mods = "Command"
 
-[mouse]
-hide_when_typing = true
-
 [selection]
 save_to_clipboard = false
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
-[window]
-decorations = "Buttonless"
-
-[window.padding]
-x = 6
-y = 6

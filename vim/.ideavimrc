@@ -3,32 +3,79 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
-"" -- Suggested options --
 source ~/.vimrc
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-" set scrolloff=5
 
-" Do incremental searching.
-" set incsearch
+" set ideajoin
+" set ideamarks
+" et idearefactormode=normal
+" set ideastatusicon=gray
 
-" Don't use Ex mode, use Q for formatting.
-" map Q gq
-
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
-" Highlight copied text
-" Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
-" Plug 'tpope/vim-commentary'
-set sneak
+" General
 set surround
-set quickscope
+set NERDTree
 
+" Searching
+set sneak
 nmap f <Plug>Sneak_s
 nmap F <Plug>Sneak_S
 unmap s
 unmap S
+
+" Highlighting
+set highlightedyank
+
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" location
+nmap <leader>l <action>(SelectInProjectView)
+
+" tab
+nmap <leader>1 <Action>(GoToTab1)
+nmap <leader>2 <Action>(GoToTab2)
+nmap <leader>3 <Action>(GoToTab3)
+nmap <leader>4 <Action>(GoToTab4)
+nmap <leader>5 <Action>(GoToTab5)
+nmap <leader>6 <Action>(GoToTab6)
+nmap <leader>7 <Action>(GoToTab7)
+nmap <leader>8 <Action>(GoToTab8)
+nmap <leader>9 <Action>(GoToTab9)
+
+" split
+map <leader>sh <Action>(MoveTabLeft)
+map <leader>sj <Action>(MoveTabDown)
+map <leader>sk <Action>(MoveTabUp)
+map <leader>sl <Action>(MoveTabRight)
+map <leader>su <Action>(Unsplit)
+map <leader>sH <Action>(SplitHorizontally)
+map <leader>sV <Action>(SplitVertically)
+map <leader>[ <action>(PreviousTab)
+map <leader>] <action>(NextTab)
+
+" goto
+nmap gT <action>(GotoTest)
+nmap gt <action>(GotoTypeDeclaration)
+nmap gd <action>(GotoDeclaration)
+nmap gi <action>(GotoImplementation)
+nmap gs <action>(GotoSuperMethod)
+nmap gE <action>(GotoPreviousError)
+nmap ge <action>(GotoNextError)
+nmap <leader>e <action>(ShowErrorDescription)
+
+" refactor
+nmap <leader>r <action>(RenameElement)
+nmap <leader>cs <action>(ChangeSignature)
+nmap <leader>im <action>(ImplementMethods)
+
+" run test
+nmap rc <action>(RunClass)
+
+" continuous shift
+vnoremap < <gv
+vnoremap > >gv
+
+" zen mode
+nmap <leader>z <Action>(ToggleZenMode)
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Refrmat Code action

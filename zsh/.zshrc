@@ -19,8 +19,6 @@ HYPHEN_INSENSITIVE="true"
 # disable command auto-correction.
 ENABLE_CORRECTION="false"
 
-# Change the command execution time stamp shown in the history command output
-HIST_STAMPS="dd.mm.yyyy"
 
 ZSH_THEME=""
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -44,10 +42,12 @@ setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 setopt APPEND_HISTORY            # append to history file
 setopt HIST_NO_STORE             # Don't store history commands
+# Change the command execution time stamp shown in the history command output
+HIST_STAMPS="dd.mm.yyyy"
+HISTORY_IGNORE="(cd|z|ls|ld|lf|lh|ll|ls|lt|exit|pwd|clear)*"
 
 plugins=(
   git
-  kubectl
   fast-syntax-highlighting
   zsh-autosuggestions
 )
@@ -58,10 +58,13 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
 
-# Golang
+eval "$(mcfly init zsh)"
+export MCFLY_FUZZY=2
+export MCFLY_KEY_SCHEME=vim
+
+# Go
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-alias t='task -g'
 alias gg='git graph'
 alias cat='bat --style=plain --theme=1337'
 
@@ -71,4 +74,3 @@ alias lh='eza -dl .* --group-directories-first'
 alias ll='eza -al --group-directories-first'
 alias ls='eza -alF --color=always --sort=size | grep -v /'
 alias lt='eza -al --sort=modified'
-

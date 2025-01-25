@@ -1,6 +1,9 @@
-[user]
-	name = Chris Hung
-	email = botckris@gmail.com
+[includeIf "hasconfig:remote.*.url:git@github.com:chr1shung/**"]
+    path = ~/.gitconfig_personal
+[includeIf "hasconfig:remote.*.url:git@github.com:company/**"]
+    path = ~/.gitconfig_work
+[include]
+    path = ~/.themes.gitconfig
 [color]
     ui = auto
 [init]
@@ -17,11 +20,8 @@
 [alias]
     graph = log --graph --full-history --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)[%an]%C(reset)'
     recent = ! git branch --sort=-committerdate --format=\"%(committerdate:relative)%09%(refname:short)\" | head -10
-
 [interactive]
     diffFilter = delta --color-only --features=interactive
-[include]
-    path = ~/.themes.gitconfig
 [delta]
     features = calochortus-lyallii
     navigate = true

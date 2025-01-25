@@ -13,20 +13,21 @@ set expandtab         " tabs are spaces
 
 " UI Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set scrolloff=5       " keep cursor in approximately the middle of the screen
 set number            " show line numbers 
-" set relativenumber  " show relative numbering
-set ruler             " display cursor position
+set relativenumber    " show relative numbering
+set showmode          " show current mode 
 set showcmd           " show command in bottom bar
-set cursorline        " highlight current line
-filetype indent on    " load filetype-specific indent files
-filetype plugin on    " load filetype-specific plugin files
-set wildmenu          " visual autocomplete for command menu
 set showmatch         " highlight matching [{()}]
+set ruler             " display cursor position
+set cursorline        " highlight current line
+set wildmenu          " visual autocomplete for command menu
 set laststatus=2      " show the status line at the bottom
 set mouse+=a          " a necessary evil, mouse support
 set noerrorbells visualbell t_vb=   "disable annoying error noises
 set linebreak         " have lines warp instead of continue off-screen
-set scrolloff=12      " keep cursor in approximately the middle of the screen
+filetype indent on    " load filetype-specific indent files
+filetype plugin on    " load filetype-specific plugin files
 
 " Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -59,6 +60,9 @@ nnoremap <CR> :noh<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable the default Vim startup message.
 set shortmess+=I
+
+" Allows Vim to use the system clipboard.
+set clipboard+=unnamed
 
 " Try to prevent bad habits like using the arrow keys for movement...
 nnoremap <Left>  :echoe "Use h"<CR>
